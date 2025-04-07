@@ -1,5 +1,4 @@
 import { useReducer, useCallback, useState } from "react";
-import { GiLargePaintBrush } from "react-icons/gi";
 import { FaMoon } from "react-icons/fa";
 import { IoSunny } from "react-icons/io5";
 
