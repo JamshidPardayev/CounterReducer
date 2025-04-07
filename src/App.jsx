@@ -44,14 +44,15 @@ const Counter = () => {
           {["red", "green", "blue", "blueviolet", "yellow", "lime", "fuchsia", "aqua"].map(color => (
             <div
               key={color}
-              className={`h-[40px] w-[40px] bg-[${color}] rounded-[50%] cursor-pointer`}
+              className={`h-[40px] w-[40px] rounded-[50%] cursor-pointer`}
+              style={{ backgroundColor: color }}
               onClick={() => changeColor(color)}
             ></div>
           ))}
         </div>
       </div>
-      <div className={`w-[350px] h-[400px] rounded-[10px] mt-3 content-center bg-[${selectedColor}] text-center`}>
-        <h2 className="text-black text-[68px]">{state.count}</h2>
+      <div className={`w-[350px] h-[400px] rounded-[10px] mt-3 content-center`} style={{ backgroundColor: selectedColor }}>
+        <h2 className="text-black text-[68px] text-center">{state.count}</h2>
         <div className="flex justify-between mb-8 mt-3 w-[70%] mx-auto">
           <button className="text-[30px] px-4 bg-black text-white rounded-[5px] hover:bg-gray-900 duration-500" onClick={decrement}>-</button>
           <button className="text-[30px] px-4 bg-black text-white rounded-[5px] hover:bg-gray-900 duration-500" onClick={reset}>Reset</button>
